@@ -1,0 +1,22 @@
+@import "../../styles/functions";
+
+.Avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-Image {
+    margin-bottom: toRem(12);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+  }
+
+  &-Username {
+    text-align: center;
+    line-height: var(--font-line-l);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-l);
+  }
+}

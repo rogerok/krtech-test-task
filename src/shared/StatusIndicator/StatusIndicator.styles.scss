@@ -1,0 +1,22 @@
+.status-indicator {
+  position: relative;
+  font-size: var(--font-size-s);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    display: block;
+    border-radius: 50%;
+  }
+
+  &_online {
+    &::before {
+      background-color: var(--green-200);
+    }
+  }
+}

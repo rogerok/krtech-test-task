@@ -1,0 +1,11 @@
+@import "../../styles//functions";
+
+.Menu {
+  height: 100%;
+  padding: toRem(40) 0 toRem(20) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blue-500);
+  color: var(--white);
+}

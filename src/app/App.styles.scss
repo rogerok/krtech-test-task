@@ -1,0 +1,10 @@
+.App {
+  display: grid;
+  grid-template-columns: 247px 1fr 1.75fr;
+  height: 100vh;
+}
+
+.ContactsList {
+  background-color: var(--white);
+  height: 100%;
+}
