@@ -2,9 +2,10 @@
 
 .Nav {
   &-Item {
+    position: relative;
     width: 100%;
     display: inline-flex;
-    justify-content: space-between;
+    align-items: center;
     padding: toRem(24);
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-bold);
@@ -17,5 +18,17 @@
       background-color: var(--blue-600);
       color: var(--white);
     }
+  }
+
+  &-ItemText {
+    margin-left: toRem(20);
+    display: inline-block;
+  }
+
+  &-Badge {
+    position: absolute;
+    top: 50%;
+    right: toRem(20);
+    transform: translateY(-50%);
   }
 }
