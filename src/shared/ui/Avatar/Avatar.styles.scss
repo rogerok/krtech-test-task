@@ -1,4 +1,4 @@
-@import "../../styles/functions";
+@import "../../../styles/functions";
 
 .Avatar {
   display: flex;
@@ -14,6 +14,7 @@
   }
 
   &-Username {
+    margin-bottom: toRem(10);
     text-align: center;
     line-height: var(--font-line-l);
     font-weight: var(--font-weight-bold);

@@ -1,5 +1,5 @@
 import React from "react";
-import "./StatusIndicator.styles.scss";
+import "./PresenceIndicator.styles.scss";
 
 const StatusIndicator = () => (
   <div className="status-indicator status-indicator_online">Online</div>

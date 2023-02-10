@@ -1,12 +1,16 @@
 import React from "react";
-import Menu from "../widgets/Menu/Menu";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "../pages/MainPage";
+import ChatPage from "../pages/ChatPage";
 import "./App.styles.scss";
 
 const App = () => (
   <main className="App">
-    <Menu />
-    <div className="ContactsList">contacts-list</div>
-    <div className="Chat">Chat</div>
+    <Routes>
+      <Route path="/" element={<MainPage />}>
+        <Route path="chat" element={<ChatPage />} />
+      </Route>
+    </Routes>
   </main>
 );
 

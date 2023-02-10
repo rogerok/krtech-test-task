@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
-import StatusIndicator from "../StatusIndicator/StatusIndicator";
+import StatusIndicator from "../PresenceIndicator/PresenceIndicator";
 import "./Avatar.styles.scss";
 
 interface AvatarProps {

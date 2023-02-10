@@ -10,7 +10,7 @@ body {
   max-width: 100%;
   min-height: 100vh;
 
-  background-color: $grey-100;
+  background-color: var(--grey-100);
 
   font-family: var(--font-family);
   font-size: var(--font-size-m);

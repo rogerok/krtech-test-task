@@ -1,0 +1,21 @@
+@import "../../../styles/functions";
+
+.Nav {
+  &-Item {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: toRem(24);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--blue-100);
+    list-style-type: none;
+
+    &_active {
+      background-color: var(--blue-600);
+      color: var(--white);
+    }
+  }
+}
