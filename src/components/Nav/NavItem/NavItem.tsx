@@ -22,18 +22,20 @@ const NavItem: React.FC<NavItemProps> = ({
 }) => {
   const nav = cn("Nav");
   const { open } = useContext(MenuContext);
+  const badgeSize = open ? "lg" : "sm";
   return (
     <NavLink
       className={({ isActive }) => nav("Item", { active: isActive })}
       to={path}
     >
       <Icon />
-      <span className={nav("ItemText", { open })}>{children}</span>
+      <span className={nav("Text", { open })}>{children}</span>
       {Badge && unreadedMessages && (
         <Badge
-          className={nav("Badge")}
+          className={nav("Badge", { open })}
           content={unreadedMessages}
           color="red"
+          size={badgeSize}
         />
       )}
     </NavLink>

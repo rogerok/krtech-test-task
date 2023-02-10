@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { cn } from "@bem-react/classname";
 import { MenuContext } from "../../shared/providers/MenuProviders/MenuContext";
+import Account from "../../components/Account/Account";
 import Avatar from "../../shared/ui/Avatar/Avatar";
-import Nav from "../../components/Nav/Nav";
 import Button from "../../shared/ui/Button/Button";
+import Nav from "../../components/Nav/Nav";
 import avatar from "../../assets/images/avatar.png";
 import { ReactComponent as OpenIcon } from "../../assets/icons/open-button.svg";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close-button.svg";
@@ -15,7 +16,7 @@ const Menu = () => {
 
   return (
     <aside className={menu({ open })}>
-      <Avatar firstName="Иван" lastName="Иванов" isOnline src={avatar} />
+      <Account firstName="Иван" lastName="Иванов" isOnline />
       <Nav />
       <p className={menu("ButtonContainer")}>
         <Button className={menu("Button")} onClick={toggleOpen}>

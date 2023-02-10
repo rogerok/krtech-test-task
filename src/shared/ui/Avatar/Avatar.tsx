@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
-import StatusIndicator from "../PresenceIndicator/PresenceIndicator";
+import PresenceIndicator from "../PresenceIndicator/PresenceIndicator";
 import "./Avatar.styles.scss";
 
 interface AvatarProps {
@@ -8,6 +8,8 @@ interface AvatarProps {
   isOnline: boolean;
   firstName: string;
   lastName: string;
+  size: "sm" | "lg";
+  className?: string;
 }
 
 const Avatar: React.FC<AvatarProps> = ({
@@ -15,21 +17,18 @@ const Avatar: React.FC<AvatarProps> = ({
   lastName,
   isOnline,
   src,
+  className,
+  size,
 }) => {
   const avatar = cn("Avatar");
 
   return (
     <div className={avatar()}>
       <img
-        className={avatar("Image")}
+        className={avatar("Image", { size }, [className])}
         src={src}
         alt={`${firstName}${lastName}`}
       />
-      <p className={avatar("Username")}>
-        <span>{firstName}&nbsp;</span>
-        <span>{lastName}</span>
-      </p>
-      <StatusIndicator />
     </div>
   );
 };

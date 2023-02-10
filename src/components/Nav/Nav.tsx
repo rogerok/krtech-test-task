@@ -4,8 +4,9 @@ import NavItem from "./NavItem/NavItem";
 import Badge from "../../shared/ui/Badge/Badge";
 import { ReactComponent as DialogsLogo } from "../../assets/icons/dialogs.svg";
 import { ReactComponent as SettingsLogo } from "../../assets/icons/settings.svg";
-import "./Nav.styles.scss";
 import { MenuContext } from "../../shared/providers/MenuProviders/MenuContext";
+import { kFormatter } from "../../shared/lib/kFormatter";
+import "./Nav.styles.scss";
 
 interface NavProps {
   open: boolean;
@@ -16,7 +17,12 @@ const Nav = () => {
   const { open } = useContext(MenuContext);
   return (
     <nav className={nav()}>
-      <NavItem path="/" Icon={DialogsLogo} Badge={Badge} unreadedMessages={192}>
+      <NavItem
+        path="/"
+        Icon={DialogsLogo}
+        Badge={Badge}
+        unreadedMessages={kFormatter(12)}
+      >
         Диалоги
       </NavItem>
       <NavItem path="/settings" Icon={SettingsLogo}>

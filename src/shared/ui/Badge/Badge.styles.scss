@@ -4,11 +4,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: toRem(5);
-  border-radius: 11px;
   box-shadow: 0px 3px 7px rgba(17, 68, 117, 0.35);
-  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
+
+  &_size_sm {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-size: var(--font-size-xxs);
+  }
+
+  &_size_lg {
+    padding: toRem(5);
+    border-radius: 11px;
+    font-size: var(--font-size-xs);
+  }
 
   &_color_blue {
     background-color: var(--blue-400);
