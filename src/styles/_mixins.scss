@@ -2,3 +2,7 @@
   background-color: var(--blue-600);
   color: var(--white);
 }
+
+@mixin base-transition {
+  transition: all 0.3s;
+}

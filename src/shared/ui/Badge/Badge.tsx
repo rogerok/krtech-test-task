@@ -5,7 +5,6 @@ import "./Badge.styles.scss";
 
 const Badge: React.FC<BadgeProps> = ({ content, className, color }) => {
   const badge = cn("Badge");
-  console.log(color);
   return <span className={badge({ color }, [className])}>{content}</span>;
 };
 

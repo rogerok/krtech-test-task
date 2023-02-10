@@ -14,7 +14,7 @@
     text-align: center;
     color: var(--blue-100);
     list-style-type: none;
-    transition: var(--base-transition);
+    @include base-transition;
 
     &:hover {
       @include active;
@@ -26,6 +26,13 @@
   }
 
   &-ItemText {
+    width: 0%;
+    overflow: hidden;
+    margin-left: toRem(20);
+    display: none;
+  }
+  &-ItemText_open {
+    width: 100%;
     margin-left: toRem(20);
     display: inline-block;
   }
