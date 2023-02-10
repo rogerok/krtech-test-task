@@ -3,12 +3,14 @@
 .Badge {
   padding: toRem(5);
   border-radius: 11px;
-  background-color: var(--blue-400);
   box-shadow: 0px 3px 7px rgba(17, 68, 117, 0.35);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
 
-  &_orange {
+  &_color_blue {
+    background-color: var(--blue-400);
+  }
+  &_color_red {
     background-color: var(--red);
   }
 }

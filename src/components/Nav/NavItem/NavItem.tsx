@@ -29,7 +29,11 @@ const NavItem: React.FC<NavItemProps> = ({
       <Icon />
       <span className={nav("ItemText")}>{children}</span>
       {Badge && unreadedMessages && (
-        <Badge className={nav("Badge")} content={unreadedMessages} isRed />
+        <Badge
+          className={nav("Badge")}
+          content={unreadedMessages}
+          color="red"
+        />
       )}
     </NavLink>
   );

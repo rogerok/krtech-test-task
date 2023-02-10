@@ -1,4 +1,5 @@
 @import "../../../styles/functions";
+@import "../../../styles/mixins";
 
 .Nav {
   &-Item {
@@ -13,10 +14,14 @@
     text-align: center;
     color: var(--blue-100);
     list-style-type: none;
+    transition: var(--base-transition);
+
+    &:hover {
+      @include active;
+    }
 
     &_active {
-      background-color: var(--blue-600);
-      color: var(--white);
+      @include active;
     }
   }
 
