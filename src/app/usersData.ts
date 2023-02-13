@@ -88,6 +88,6 @@ export const usersData = [
     lastName: "Курочкин",
     message: "Создающие собственные",
     isOnline: true,
-    isTyping: true,
+    isTyping: false,
   },
 ];
