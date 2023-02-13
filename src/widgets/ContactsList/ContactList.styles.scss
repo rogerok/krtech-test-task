@@ -1,0 +1,16 @@
+@import "../../styles/functions";
+
+.ContactsList {
+  background-color: var(--white);
+  overflow-x: hidden;
+
+  &-Contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-Form {
+    padding: toRem(20) toRem(14);
+    border-bottom: 1px solid var(--grey-200);
+  }
+}

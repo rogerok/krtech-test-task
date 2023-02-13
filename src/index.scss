@@ -4,6 +4,7 @@
 @import "./styles/variables/fonts";
 @import "./styles/functions";
 @import "./styles/mixins";
+@import "./styles/visually-hidden";
 
 body {
   margin: 0 auto;
@@ -14,5 +15,6 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
   color: var(--blue-700);
 }

@@ -1,31 +1,32 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
-import PresenceIndicator from "../PresenceIndicator/PresenceIndicator";
 import "./Avatar.styles.scss";
+
+export enum AvatarSize {
+  SM = "sm",
+  LG = "lg",
+}
 
 interface AvatarProps {
   src: string;
-  isOnline: boolean;
   firstName: string;
-  lastName: string;
-  size: "sm" | "lg";
+  lastName?: string;
+  size?: AvatarSize;
   className?: string;
 }
 
 const Avatar: React.FC<AvatarProps> = ({
   firstName,
   lastName,
-  isOnline,
   src,
   className,
-  size,
+  size = AvatarSize.SM,
 }) => {
   const avatar = cn("Avatar");
-
   return (
-    <div className={avatar()}>
+    <div className={avatar({ size }, [className])}>
       <img
-        className={avatar("Image", { size }, [className])}
+        className={avatar("Image")}
         src={src}
         alt={`${firstName}${lastName}`}
       />

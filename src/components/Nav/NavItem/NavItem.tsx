@@ -1,9 +1,14 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { cn } from "@bem-react/classname";
-import { BadgeProps } from "../../../shared/ui/Badge/Badge.types";
+import {
+  BadgeColor,
+  BadgeProps,
+  BadgeSize,
+} from "../../../shared/ui/Badge/Badge";
 import { MenuContext } from "../../../shared/providers/MenuProviders/MenuContext";
 import "./NavItem.styles.scss";
+import { visuallyHidden } from "../../../shared/lib/visuallyHidden";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -22,19 +27,30 @@ const NavItem: React.FC<NavItemProps> = ({
 }) => {
   const nav = cn("Nav");
   const { open } = useContext(MenuContext);
-  const badgeSize = open ? "lg" : "sm";
+  const badgeSize = open ? BadgeSize.LG : BadgeSize.SM;
+
   return (
     <NavLink
       className={({ isActive }) => nav("Item", { active: isActive })}
       to={path}
     >
       <Icon />
-      <span className={nav("Text", { open })}>{children}</span>
+      <span
+        className={nav(
+          "Text",
+          {
+            open,
+          },
+          [visuallyHidden(open)]
+        )}
+      >
+        {children}
+      </span>
       {Badge && unreadedMessages && (
         <Badge
           className={nav("Badge", { open })}
           content={unreadedMessages}
-          color="red"
+          color={BadgeColor.RED}
           size={badgeSize}
         />
       )}

@@ -4,13 +4,20 @@ import "./PresenceIndicator.styles.scss";
 
 interface StatusIndicatorProps {
   isOnline: boolean;
+  withText?: boolean;
+  className?: string;
 }
 
-const PresenceIndicator: React.FC<StatusIndicatorProps> = ({ isOnline }) => {
+const PresenceIndicator: React.FC<StatusIndicatorProps> = ({
+  isOnline,
+  className,
+  withText = false,
+}) => {
   const presenceIndicator = cn("PresenceIndicator");
+  const textIndicator = isOnline ? "Online" : "Offline";
   return (
-    <div className={presenceIndicator({ online: isOnline })}>
-      {isOnline ? "Online" : "Offline"}
+    <div className={presenceIndicator({ online: isOnline }, [className])}>
+      {withText && textIndicator}
     </div>
   );
 };

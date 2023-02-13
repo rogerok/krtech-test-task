@@ -28,13 +28,14 @@
   &-Text {
     width: 0%;
     margin-left: toRem(20);
-    display: none;
+    opacity: 0;
+    @include base-transition;
   }
 
   &-Text_open {
-    width: 100%;
     margin-left: toRem(20);
     display: inline-block;
+    opacity: 1;
   }
 
   &-Badge {

@@ -1,8 +1,10 @@
 @import "../../styles//functions";
+
 .Account {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-bottom: toRem(11);
 
   &_open {
@@ -28,10 +30,24 @@
   }
 
   &-Username {
-    margin-bottom: toRem(10);
+    margin-bottom: toRem(5);
     text-align: center;
     line-height: var(--font-line-l);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-l);
+  }
+
+  &-PresenceStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &-PresenceIndicator {
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
