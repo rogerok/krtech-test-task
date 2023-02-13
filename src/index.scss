@@ -6,6 +6,28 @@
 @import "./styles/mixins";
 @import "./styles/visually-hidden";
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 68, 117, 0.5);
+  border-radius: 3px;
+  height: 7px !important;
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(17, 68, 117, 0.8);
+}
+
+@supports (scrollbar-color: rgba(17, 68, 117, 0.5) rgba(17, 68, 117, 0.5)) {
+  * {
+    scrollbar-color: rgba(17, 68, 117, 0.5) rgba(17, 68, 117, 0.5);
+    scrollbar-width: thin;
+  }
+}
+
 body {
   margin: 0 auto;
   width: 1200px;

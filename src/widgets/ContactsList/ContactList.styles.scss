@@ -2,7 +2,7 @@
 
 .ContactsList {
   background-color: var(--white);
-  overflow-x: hidden;
+  overflow-y: scroll;
 
   &-Contacts {
     display: flex;

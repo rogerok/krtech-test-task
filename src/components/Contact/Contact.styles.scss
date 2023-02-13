@@ -24,6 +24,20 @@
     transform: translateY(-50%);
   }
 
+  &-Avatar {
+    position: relative;
+  }
+  &-Img {
+    position: absolute;
+    top: 0;
+
+    left: 0;
+    /*     transform: translateY(-50%); */
+  }
+  &-PresenceIndicator {
+    position: absolute;
+  }
+
   &-Info {
     display: flex;
     flex-direction: column;
