@@ -10,11 +10,9 @@ body {
   width: 1200px;
   max-width: 100%;
   min-height: 100vh;
-
   background-color: var(--grey-100);
-
   font-family: var(--font-family);
   font-size: var(--font-size-m);
-  font-weight: var--(font-weight-regular);
+  font-weight: var(--font-weight-regular);
   color: var(--blue-700);
 }

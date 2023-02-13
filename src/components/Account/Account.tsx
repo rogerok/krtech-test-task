@@ -3,8 +3,10 @@ import { cn } from "@bem-react/classname";
 import { MenuContext } from "../../shared/providers/MenuProviders/MenuContext";
 import Avatar from "../../shared/ui/Avatar/Avatar";
 import PresenceIndicator from "../../shared/ui/PresenceIndicator/PresenceIndicator";
-import avatarImg from "../../assets/images/avatar.png";
+import avatarImg from "../../assets/images/avatar.jpg";
 import "./Account.styles.scss";
+
+import { usersData } from "../../app/usersData";
 
 interface AccountProps {
   thumbnail?: string;
