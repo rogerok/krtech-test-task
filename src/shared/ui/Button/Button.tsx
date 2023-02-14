@@ -8,7 +8,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, className, children }) => {
+export const Button: React.FC<ButtonProps> = ({
+  onClick,
+  className,
+  children,
+}) => {
   const button = cn("Button");
 
   return (
@@ -21,5 +25,3 @@ const Button: React.FC<ButtonProps> = ({ onClick, className, children }) => {
     </button>
   );
 };
-
-export default Button;

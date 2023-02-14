@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
-import Contact from "../../components/Contact/Contact";
-import Input from "../../shared/ui/Input/Input";
+import { Contact } from "components/Contact/ui/Contact";
+import { Input } from "../../shared/ui/Input/Input";
 import { usersData } from "../../shared/usersData";
 import "./ContactList.styles.scss";
 

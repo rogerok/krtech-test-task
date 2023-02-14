@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
+import { generateRandomHsla } from "../../lib/generateRandomColor";
 import "./Badge.styles.scss";
 
 export enum BadgeColor {
@@ -19,7 +20,7 @@ export interface BadgeProps {
   size?: BadgeSize;
 }
 
-const Badge: React.FC<BadgeProps> = ({
+export const Badge: React.FC<BadgeProps> = ({
   content,
   className,
   color = BadgeColor.BLUE,
@@ -28,5 +29,3 @@ const Badge: React.FC<BadgeProps> = ({
   const badge = cn("Badge");
   return <span className={badge({ color, size }, [className])}>{content}</span>;
 };
-
-export default Badge;

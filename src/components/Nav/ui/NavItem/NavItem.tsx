@@ -5,10 +5,10 @@ import {
   BadgeColor,
   BadgeProps,
   BadgeSize,
-} from "../../../shared/ui/Badge/Badge";
-import { MenuContext } from "../../../shared/providers/MenuProviders/MenuContext";
+} from "../../../../shared/ui/Badge/Badge";
+import { MenuContext } from "../../../../shared/providers/MenuProviders/MenuContext";
 import "./NavItem.styles.scss";
-import { visuallyHidden } from "../../../shared/lib/visuallyHidden";
+import { visuallyHidden } from "../../../../shared/lib/visuallyHidden";
 
 interface NavItemProps {
   children: React.ReactNode;

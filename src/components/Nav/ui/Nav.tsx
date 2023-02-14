@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { cn } from "@bem-react/classname";
+import { ReactComponent as DialogsLogo } from "assets/icons/dialogs.svg";
+import { ReactComponent as SettingsLogo } from "assets/icons/settings.svg";
+import { Badge } from "shared/ui/Badge/Badge";
 import NavItem from "./NavItem/NavItem";
-import Badge from "../../shared/ui/Badge/Badge";
-import { ReactComponent as DialogsLogo } from "../../assets/icons/dialogs.svg";
-import { ReactComponent as SettingsLogo } from "../../assets/icons/settings.svg";
-import { kFormatter } from "../../shared/lib/kFormatter";
+import { kFormatter } from "../../../shared/lib/kFormatter";
 import "./Nav.styles.scss";
 
-const Nav = () => {
+export const Nav = () => {
   const nav = cn("Nav");
 
   return (
@@ -26,5 +26,4 @@ const Nav = () => {
     </nav>
   );
 };
-
-export default React.memo(Nav);
+export const NavMemoized = React.memo(Nav);

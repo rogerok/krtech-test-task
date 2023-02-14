@@ -1,15 +1,15 @@
 import React, { useMemo } from "react";
 import { cn } from "@bem-react/classname";
 import { Link } from "react-router-dom";
-import Avatar from "../../shared/ui/Avatar/Avatar";
-import PresenceIndicator from "../../shared/ui/PresenceIndicator/PresenceIndicator";
-import Badge, { BadgeSize } from "../../shared/ui/Badge/Badge";
-import { reduceStringLength } from "../../shared/lib/reduceStringLength";
-import { kFormatter } from "../../shared/lib/kFormatter";
-import { UserData } from "../../shared/usersData";
+import { Avatar } from "shared/ui/Avatar/Avatar";
+import { PresenceIndicator } from "../../../shared/ui/PresenceIndicator/PresenceIndicator";
+import { Badge, BadgeSize } from "../../../shared/ui/Badge/Badge";
+import { reduceStringLength } from "../../../shared/lib/reduceStringLength";
+import { kFormatter } from "../../../shared/lib/kFormatter";
+import { UserData } from "../../../shared/usersData";
 import "./Contact.styles.scss";
 
-const Contact: React.FC<UserData> = ({
+export const Contact: React.FC<UserData> = ({
   id,
   firstName,
   lastName,
@@ -68,5 +68,3 @@ const Contact: React.FC<UserData> = ({
     </li>
   );
 };
-
-export default Contact;

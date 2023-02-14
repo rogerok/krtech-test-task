@@ -1,4 +1,4 @@
-@import "../../styles/functions";
+@import "../../../styles/functions";
 
 .Contact {
   display: flex;
@@ -23,7 +23,7 @@
     left: 14px;
     transform: translateY(-50%);
   }
-
+  /* 
   &-Avatar {
     position: relative;
   }
@@ -32,11 +32,11 @@
     top: 0;
 
     left: 0;
-    /*     transform: translateY(-50%); */
+        transform: translateY(-50%);
   }
   &-PresenceIndicator {
     position: absolute;
-  }
+  } */
 
   &-Info {
     display: flex;
@@ -80,5 +80,14 @@
     position: absolute;
     right: 14px;
     top: 14px;
+  }
+
+  &:hover {
+    background-color: var(--blue-100);
+  }
+  &:hover {
+    .Contact-PresenceIndicator:after {
+      border-color: var(--blue-100);
+    }
   }
 }

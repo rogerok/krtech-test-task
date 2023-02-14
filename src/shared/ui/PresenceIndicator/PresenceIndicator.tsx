@@ -8,7 +8,7 @@ interface StatusIndicatorProps {
   className?: string;
 }
 
-const PresenceIndicator: React.FC<StatusIndicatorProps> = ({
+export const PresenceIndicator: React.FC<StatusIndicatorProps> = ({
   isOnline,
   className,
   withText = false,
@@ -21,4 +21,3 @@ const PresenceIndicator: React.FC<StatusIndicatorProps> = ({
     </div>
   );
 };
-export default PresenceIndicator;

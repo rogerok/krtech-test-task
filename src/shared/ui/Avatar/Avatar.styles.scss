@@ -19,4 +19,15 @@
     border-radius: 50%;
     @include base-transition;
   }
+  &-Placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: var(--font-size-xl);
+    color: var(--white);
+    text-transform: uppercase;
+  }
 }

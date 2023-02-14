@@ -4,9 +4,7 @@ import "./Input.styles.scss";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-const Input: React.FC<InputProps> = ({ ...props }) => {
+export const Input: React.FC<InputProps> = ({ ...props }) => {
   const input = cn("Input");
   return <input className={input()} {...props} />;
 };
-
-export default Input;

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { cn } from "@bem-react/classname";
-import { MenuContext } from "../../shared/providers/MenuProviders/MenuContext";
-import Avatar, { AvatarSize } from "../../shared/ui/Avatar/Avatar";
-import PresenceIndicator from "../../shared/ui/PresenceIndicator/PresenceIndicator";
-import avatarImg from "../../assets/images/avatar.jpg";
+import avatarImg from "assets/images/avatar.jpg";
+import { MenuContext } from "../../../shared/providers/MenuProviders/MenuContext";
+import { Avatar, AvatarSize } from "../../../shared/ui/Avatar/Avatar";
+import { PresenceIndicator } from "../../../shared/ui/PresenceIndicator/PresenceIndicator";
 import "./Account.styles.scss";
 
 interface AccountProps {
@@ -12,7 +12,7 @@ interface AccountProps {
   firstName: string;
   lastName: string;
 }
-const Account: React.FC<AccountProps> = ({
+export const Account: React.FC<AccountProps> = ({
   firstName,
   lastName,
   isOnline,
@@ -48,5 +48,3 @@ const Account: React.FC<AccountProps> = ({
     </div>
   );
 };
-
-export default Account;
