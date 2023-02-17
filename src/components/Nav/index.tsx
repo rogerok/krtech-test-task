@@ -1,1 +1,1 @@
-export { NavMemoized as Nav } from "./ui/Nav";
+export { Nav } from "./ui/Nav";

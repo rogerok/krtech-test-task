@@ -1,43 +1,50 @@
 @import "../../../styles/functions";
+@import "../../../styles/mixins";
 
 .Contact {
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
+  align-items: space-between;
   list-style-type: none;
   font-size: var(--font-size-s);
   letter-spacing: 0.4px;
+  @include base-transition;
+
+  &:hover {
+    background-color: var(--blue-100);
+    color: var(--white);
+  }
+  &:hover & {
+    &-PresenceIndicator:after {
+      border-color: var(--blue-200);
+    }
+    &-TypingIndicator {
+      color: var(--white);
+    }
+  }
 
   &-Link {
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 1em;
-  }
 
-  &-Avatar {
-    position: absolute;
-    top: 50%;
-    left: 14px;
-    transform: translateY(-50%);
+    &_active {
+      background-color: var(--blue-200);
+      color: var(--white);
+    }
   }
-  /* 
-  &-Avatar {
-    position: relative;
+  &-Link_active & {
+    &-PresenceIndicator:after {
+      border-color: var(--blue-200);
+    }
+    &-TypingIndicator {
+      color: var(--white);
+    }
   }
-  &-Img {
-    position: absolute;
-    top: 0;
-
-    left: 0;
-        transform: translateY(-50%);
-  }
-  &-PresenceIndicator {
-    position: absolute;
-  } */
-
   &-Info {
     display: flex;
     flex-direction: column;
@@ -47,8 +54,8 @@
 
   &-PresenceIndicator {
     position: absolute;
-    bottom: 3px;
-    left: 40px;
+    bottom: 14px;
+    left: 53px;
     &:after {
       position: absolute;
       top: -2px;
@@ -80,14 +87,5 @@
     position: absolute;
     right: 14px;
     top: 14px;
-  }
-
-  &:hover {
-    background-color: var(--blue-100);
-  }
-  &:hover {
-    .Contact-PresenceIndicator:after {
-      border-color: var(--blue-100);
-    }
   }
 }

@@ -1,14 +1,10 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { cn } from "@bem-react/classname";
-import {
-  BadgeColor,
-  BadgeProps,
-  BadgeSize,
-} from "../../../../shared/ui/Badge/Badge";
-import { MenuContext } from "../../../../shared/providers/MenuProviders/MenuContext";
+import { BadgeColor, BadgeProps, BadgeSize } from "shared/ui/Badge/Badge";
+import { MenuContext } from "shared/providers/MenuProviders/MenuContext";
+import { visuallyHidden } from "shared/lib/visuallyHidden";
 import "./NavItem.styles.scss";
-import { visuallyHidden } from "../../../../shared/lib/visuallyHidden";
 
 interface NavItemProps {
   children: React.ReactNode;

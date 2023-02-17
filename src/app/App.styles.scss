@@ -1,6 +1,10 @@
 .App {
   display: grid;
-  grid-template-columns: 247px minmax(345px, 1fr) 1.75fr;
+  grid-template-columns: minmax(80px, 247px) minmax(345px, 1fr) 1.75fr;
+  /*   align-content: center;
+  justify-content: center; */
+  grid-auto-flow: column;
+
   height: 100vh;
 }
 

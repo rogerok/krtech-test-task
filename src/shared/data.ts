@@ -5,6 +5,7 @@ import anna from "../assets/images/anna.jpg";
 import alina from "../assets/images/alina.jpg";
 import vova from "../assets/images/vova.jpg";
 import igor from "../assets/images/igor.jpg";
+import accountAvatar from "../assets/images/avatar.jpg";
 
 export interface UserData {
   id: number;
@@ -17,6 +18,18 @@ export interface UserData {
   lastMessageDate: string;
   unreadedMessagesAmount: number;
 }
+
+export const accountData: Pick<
+  UserData,
+  "firstName" | "lastName" | "unreadedMessagesAmount" | "isOnline" | "thumbnail"
+> = {
+  firstName: "Иван",
+  lastName: "Иванов",
+  unreadedMessagesAmount: 12,
+  isOnline: true,
+  thumbnail: accountAvatar,
+};
+
 export const usersData: UserData[] = [
   {
     id: 1,

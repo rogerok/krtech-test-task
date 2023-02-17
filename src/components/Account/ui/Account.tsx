@@ -1,23 +1,14 @@
 import React, { useContext } from "react";
 import { cn } from "@bem-react/classname";
-import avatarImg from "assets/images/avatar.jpg";
-import { MenuContext } from "../../../shared/providers/MenuProviders/MenuContext";
-import { Avatar, AvatarSize } from "../../../shared/ui/Avatar/Avatar";
-import { PresenceIndicator } from "../../../shared/ui/PresenceIndicator/PresenceIndicator";
+import { observer } from "mobx-react-lite";
+import { userStore } from "shared/store/user.store";
+import { MenuContext } from "shared/providers/MenuProviders/MenuContext";
+import { Avatar, AvatarSize } from "shared/ui/Avatar/Avatar";
+import { PresenceIndicator } from "shared/ui/PresenceIndicator/PresenceIndicator";
 import "./Account.styles.scss";
 
-interface AccountProps {
-  thumbnail?: string;
-  isOnline: boolean;
-  firstName: string;
-  lastName: string;
-}
-export const Account: React.FC<AccountProps> = ({
-  firstName,
-  lastName,
-  isOnline,
-  thumbnail,
-}) => {
+export const Account = observer(() => {
+  const { firstName, lastName, isOnline, thumbnail } = userStore.userData;
   const account = cn("Account");
   const { open } = useContext(MenuContext);
   const avatarSize = open ? AvatarSize.LG : AvatarSize.SM;
@@ -29,7 +20,7 @@ export const Account: React.FC<AccountProps> = ({
         className={account("Avatar", { open })}
         firstName={firstName}
         lastName={lastName}
-        src={avatarImg}
+        src={thumbnail}
         size={avatarSize}
       />
       <section className={account("Info", { open })}>
@@ -47,4 +38,4 @@ export const Account: React.FC<AccountProps> = ({
       </section>
     </div>
   );
-};
+});

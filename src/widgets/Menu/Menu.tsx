@@ -14,7 +14,7 @@ const Menu = () => {
 
   return (
     <aside className={menu({ open })}>
-      <Account firstName="Иван" lastName="Иванов" isOnline />
+      <Account />
       <Nav />
       <p className={menu("ButtonContainer")}>
         <Button className={menu("Button")} onClick={toggleOpen}>
