@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { RoutePath } from "shared/config/routeConfig";
 import { ChatPage } from "pages/ChatPage";
-import { MainPage } from "pages/MainPage";
+import { MainPage } from "pages/MainPage/MainPage";
 
 const AppRouter = () => (
   <Routes>

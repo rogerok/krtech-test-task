@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { cn } from "@bem-react/classname";
 import { observer } from "mobx-react-lite";
 import { ReactComponent as DialogsLogo } from "assets/icons/dialogs.svg";

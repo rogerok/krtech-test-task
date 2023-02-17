@@ -2,7 +2,6 @@
 
 .ContactsList {
   background-color: var(--white);
-  overflow-y: scroll;
 
   &-Contacts {
     display: flex;
@@ -10,7 +9,7 @@
   }
 
   &-Contacts_empty {
-    margin-top: 2rem;
+    padding: 2rem;
     align-items: center;
   }
 

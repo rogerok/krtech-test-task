@@ -12,7 +12,7 @@
 
   @include base-transition;
   &_open {
-    width: 100%;
+    width: calc(247 / 1200 * 100%);
     padding: toRem(40) 0 toRem(20) 0;
   }
 

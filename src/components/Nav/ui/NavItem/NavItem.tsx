@@ -42,7 +42,7 @@ const NavItem: React.FC<NavItemProps> = ({
       >
         {children}
       </span>
-      {Badge && unreadedMessages && (
+      {Badge && !!unreadedMessages && (
         <Badge
           className={nav("Badge", { open })}
           content={unreadedMessages}

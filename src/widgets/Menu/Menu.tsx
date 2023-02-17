@@ -13,6 +13,7 @@ const Menu = () => {
   const { open, toggleOpen } = useContext(MenuContext);
 
   return (
+    /*  <div className=""> */
     <aside className={menu({ open })}>
       <Account />
       <Nav />
@@ -22,6 +23,7 @@ const Menu = () => {
         </Button>
       </p>
     </aside>
+    /*     </div> */
   );
 };
 export default Menu;
