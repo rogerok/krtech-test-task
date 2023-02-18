@@ -34,7 +34,7 @@ export const MainPage = observer(() => {
     ? contactsStore.searchResults
     : sortedContacts;
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const interval = setInterval(() => {
       const randomUsersQuantity = generateRandomNumber(1, 2);
       const arrayOfNumbers = generateArrayOfNumbers(randomUsersQuantity);
@@ -63,7 +63,7 @@ export const MainPage = observer(() => {
       });
     }, 5000);
     return () => clearTimeout(interval);
-  }, []);
+  }, []); */
 
   return (
     <div className={mainPage()}>
@@ -74,8 +74,7 @@ export const MainPage = observer(() => {
       <div className={mainPage("ContactsList")}>
         <form className={mainPage("Form")}>
           <Input
-            id="search-user"
-            name="search-user"
+            name="searchUser"
             placeholder="Поиск"
             type="text"
             onChange={onInputChange}

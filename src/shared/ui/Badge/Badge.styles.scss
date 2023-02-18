@@ -23,10 +23,20 @@
     font-size: var(--font-size-xs);
   }
 
+  &_size_xl {
+    width: 94px;
+    height: 30px;
+    border-radius: 17px;
+    font-size: var(--font-size-xs);
+  }
+
   &_color_blue {
     background-color: var(--blue-400);
   }
   &_color_red {
     background-color: var(--red);
+  }
+  &_color_grey {
+    background-color: var(--grey-300);
   }
 }

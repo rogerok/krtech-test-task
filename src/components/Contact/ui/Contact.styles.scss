@@ -33,7 +33,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 1em;
+    padding: toRem(10) toRem(14) toRem(12) toRem(14);
 
     &_active {
       background-color: var(--blue-200);

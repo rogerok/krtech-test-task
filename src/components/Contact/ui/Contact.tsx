@@ -24,16 +24,15 @@ export const Contact: React.FC<UserData> = observer(
     unreadedMessagesAmount,
     isTyping,
     isOnline,
-    dialog,
   }: UserData) => {
     const contact = cn("Contact");
     const isActive = Boolean(useMatch(`${RoutePath.chat}/${id}`));
     const messageTime = formatHourMinutes(lastMessageDate);
+
     const unreadedMessages = useMemo(
       () => kFormatter(unreadedMessagesAmount),
       [unreadedMessagesAmount]
     );
-
     return (
       <li className={contact()}>
         <Link

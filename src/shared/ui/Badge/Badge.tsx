@@ -1,16 +1,17 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
-import { generateRandomHsla } from "../../lib/generateRandomColor";
 import "./Badge.styles.scss";
 
 export enum BadgeColor {
   RED = "red",
   BLUE = "blue",
+  GREY = "grey",
 }
 
 export enum BadgeSize {
   SM = "sm",
   LG = "lg",
+  XL = "xl",
 }
 
 export interface BadgeProps {

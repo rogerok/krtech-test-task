@@ -15,7 +15,7 @@ export interface UserData {
   isOnline: boolean;
   isTyping: boolean;
   thumbnail?: string;
-  lastMessageDate: string;
+  lastMessageDate: string | number;
   unreadedMessagesAmount: number;
   dialog: {
     userId: number;
@@ -54,7 +54,7 @@ export const usersData: Record<string, UserData> = {
     unreadedMessagesAmount: 0,
     dialog: [
       {
-        userId: 11,
+        userId: 1,
         text: "Хорошо, отправил",
         date: "February 13 2023 08:27",
       },

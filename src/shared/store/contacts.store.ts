@@ -1,6 +1,5 @@
-import { makeAutoObservable, observable } from "mobx";
+import { makeAutoObservable } from "mobx";
 import { usersData, UserData } from "shared/data";
-import { formatFullDate } from "shared/lib/formatDate";
 
 export class Contacts {
   contactsData: Record<string, UserData> = usersData;
@@ -41,8 +40,7 @@ export class Contacts {
   };
 
   updateLastMessageDate = (date: Date, id: number) => {
-    const d = formatFullDate(date);
-    this.contactsData[id].lastMessageDate = d;
+    this.contactsData[id].lastMessageDate = date.getTime();
   };
 
   get searchResults() {
