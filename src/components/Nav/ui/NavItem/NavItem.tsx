@@ -14,44 +14,38 @@ interface NavItemProps {
   unreadedMessages?: number | string;
 }
 
-const NavItem: React.FC<NavItemProps> = ({
-  path,
-  Icon,
-  Badge,
-  unreadedMessages,
-  children,
-}) => {
-  const nav = cn("Nav");
-  const { open } = useContext(MenuContext);
-  const badgeSize = open ? BadgeSize.LG : BadgeSize.SM;
+export const NavItem = React.memo(
+  ({ path, Icon, Badge, unreadedMessages, children }: NavItemProps) => {
+    const nav = cn("Nav");
+    const { open } = useContext(MenuContext);
+    const badgeSize = open ? BadgeSize.LG : BadgeSize.SM;
 
-  return (
-    <NavLink
-      className={({ isActive }) => nav("Item", { active: isActive })}
-      to={path}
-    >
-      <Icon />
-      <span
-        className={nav(
-          "Text",
-          {
-            open,
-          },
-          [visuallyHidden(open)]
-        )}
+    return (
+      <NavLink
+        className={({ isActive }) => nav("Item", { active: isActive })}
+        to={path}
       >
-        {children}
-      </span>
-      {Badge && !!unreadedMessages && (
-        <Badge
-          className={nav("Badge", { open })}
-          content={unreadedMessages}
-          color={BadgeColor.RED}
-          size={badgeSize}
-        />
-      )}
-    </NavLink>
-  );
-};
-
-export default React.memo(NavItem);
+        <Icon />
+        <span
+          className={nav(
+            "Text",
+            {
+              open,
+            },
+            [visuallyHidden(open)]
+          )}
+        >
+          {children}
+        </span>
+        {Badge && !!unreadedMessages && (
+          <Badge
+            className={nav("Badge", { open })}
+            content={unreadedMessages}
+            color={BadgeColor.RED}
+            size={badgeSize}
+          />
+        )}
+      </NavLink>
+    );
+  }
+);

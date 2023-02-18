@@ -1,5 +1,6 @@
 import { makeAutoObservable, observable } from "mobx";
 import { usersData, UserData } from "shared/data";
+import { formatFullDate } from "shared/lib/formatDate";
 
 export class Contacts {
   contactsData: Record<string, UserData> = usersData;
@@ -9,7 +10,7 @@ export class Contacts {
   searchTerm = "";
 
   constructor() {
-    makeAutoObservable(this, { contactsData: observable });
+    makeAutoObservable(this, {}, { deep: true });
   }
 
   get totalUnreadedMessages() {
@@ -19,28 +20,50 @@ export class Contacts {
     );
   }
 
-  setUserOnline(userId: number, isOnline: boolean) {
+  setUserOnline = (userId: number, isOnline: boolean) => {
     this.contactsData[userId].isOnline = isOnline;
-  }
+  };
 
-  increaseMessagesAmount(userId: number | string) {
+  increaseMessagesAmount = (userId: number | string) => {
     this.contactsData[userId].unreadedMessagesAmount += 1;
-  }
+  };
 
-  setUserTyping(userId: number | string, isTyping: boolean) {
+  setUserTyping = (userId: number | string, isTyping: boolean) => {
     this.contactsData[userId].isTyping = isTyping;
-    console.log(this.contactsData[userId].isTyping, userId);
-  }
+  };
 
-  searchUser(searchTerm: string) {
+  searchUser = (searchTerm: string) => {
     this.searchTerm = searchTerm.trim().toLowerCase();
-  }
+  };
+
+  clearUnreadedMessages = (id: number) => {
+    this.contactsData[id].unreadedMessagesAmount = 0;
+  };
+
+  updateLastMessageDate = (date: Date, id: number) => {
+    const d = formatFullDate(date);
+    this.contactsData[id].lastMessageDate = d;
+  };
 
   get searchResults() {
-    return Object.values(this.contactsData).filter(
-      ({ firstName, lastName }) =>
-        firstName.toLowerCase().includes(this.searchTerm) ||
-        (lastName && lastName.toLowerCase().includes(this.searchTerm))
+    return Object.values(this.contactsData)
+      .filter(
+        ({ firstName, lastName }) =>
+          firstName.toLowerCase().includes(this.searchTerm) ||
+          (lastName && lastName.toLowerCase().includes(this.searchTerm))
+      )
+      .sort(
+        (a, b) =>
+          new Date(b.lastMessageDate).getTime() -
+          new Date(a.lastMessageDate).getTime()
+      );
+  }
+
+  get sortedContacts() {
+    return Object.values(this.contactsData).sort(
+      (a, b) =>
+        new Date(b.lastMessageDate).getTime() -
+        new Date(a.lastMessageDate).getTime()
     );
   }
 }

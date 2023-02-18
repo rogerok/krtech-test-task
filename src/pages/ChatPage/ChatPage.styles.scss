@@ -1,0 +1,31 @@
+@import "./../../styles/functions";
+.ChatPage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--grey-100);
+  color: var(--blue-700);
+
+  &-Header {
+    width: 100%;
+    padding: toRem(10) toRem(10) toRem(13) toRem(10);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    background-color: var(--white);
+  }
+
+  &-UserName {
+    margin-bottom: toRem(7);
+    text-align: center;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &-Chat {
+    flex: 1;
+    max-width: 468px;
+    padding: toRem(8) toRem(30);
+  }
+}

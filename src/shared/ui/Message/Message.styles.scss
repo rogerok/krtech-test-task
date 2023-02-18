@@ -1,0 +1,28 @@
+@import "../../../styles/functions";
+
+.Message {
+  max-width: 468px;
+  display: flex;
+  padding: toRem(8) toRem(16);
+  background-color: var(--white);
+  font-size: var(--font-size-s);
+
+  &_inverted {
+    color: var(--white);
+    background-color: var(--blue-400);
+  }
+
+  &-Message {
+    padding-right: 10px;
+  }
+
+  &-Time {
+    margin-top: auto;
+    color: var(--grey-400);
+    font-size: var(--font-size-xs);
+
+    &_inverted {
+      color: var(--white);
+    }
+  }
+}

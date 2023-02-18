@@ -6,8 +6,7 @@ import { ReactComponent as SettingsLogo } from "assets/icons/settings.svg";
 import { Badge } from "shared/ui/Badge/Badge";
 import { kFormatter } from "shared/lib/kFormatter";
 import { contactsStore } from "shared/store/contacts.store";
-
-import NavItem from "./NavItem/NavItem";
+import { NavItem } from "./NavItem/NavItem";
 import "./Nav.styles.scss";
 
 export const Nav = observer(() => {

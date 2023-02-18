@@ -8,13 +8,13 @@ import { ReactComponent as OpenIcon } from "../../assets/icons/open-button.svg";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close-button.svg";
 import "./Menu.styles.scss";
 
-const Menu = () => {
+export const Menu = () => {
   const menu = cn("Menu");
   const { open, toggleOpen } = useContext(MenuContext);
 
   return (
-    /*  <div className=""> */
     <aside className={menu({ open })}>
+      <h3 className="visually-hidden">Меню</h3>
       <Account />
       <Nav />
       <p className={menu("ButtonContainer")}>
@@ -23,7 +23,5 @@ const Menu = () => {
         </Button>
       </p>
     </aside>
-    /*     </div> */
   );
 };
-export default Menu;
