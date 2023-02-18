@@ -4,8 +4,9 @@
   height: 100vh;
 
   &-ContactsList {
-    flex-grow: 0;
     width: calc(345 / 1200 * 100%);
+    flex-grow: 0;
+    background-color: var(--white);
     border-right: 1px solid var(--grey-200);
     overflow-y: scroll;
   }
