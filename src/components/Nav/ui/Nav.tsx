@@ -22,7 +22,7 @@ export const Nav = observer(() => {
       >
         Диалоги
       </NavItem>
-      <NavItem path="" Icon={SettingsLogo}>
+      <NavItem path="/settings" Icon={SettingsLogo}>
         Настройки
       </NavItem>
     </nav>
