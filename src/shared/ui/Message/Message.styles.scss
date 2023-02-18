@@ -1,0 +1,57 @@
+@import "../../../styles/functions";
+@import "../../../styles/mixins";
+
+.Message {
+  max-width: 468px;
+  width: fit-content;
+  margin-bottom: toRem(8);
+  display: flex;
+  padding: toRem(8) toRem(16) toRem(6) toRem(16);
+  background-color: var(--white);
+  border-radius: 16px 16px 16px 4px;
+  font-size: var(--font-size-s);
+  @include base-shadow-3;
+
+  &_isMe {
+    margin-top: toRem(20);
+    margin-left: auto;
+    background-color: var(--blue-400);
+    border-radius: 16px 16px 4px 16px;
+    color: var(--white);
+  }
+
+  &-Content {
+    width: 100%;
+    max-width: calc(401 / 468 * 100%);
+    display: flex;
+    max-width: 401px;
+  }
+
+  &-Badge {
+    margin: 0 auto 20px auto;
+  }
+
+  &-Text {
+    margin-right: toRem(10);
+  }
+
+  &-Time {
+    margin-top: auto;
+    margin-left: auto;
+    flex: 1;
+    padding-top: toRem(8);
+    color: var(--grey-400);
+    line-height: 14px;
+    font-size: var(--font-size-xs);
+
+    &_inverted {
+      color: var(--white);
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .Message {
+    font-size: var(--font-size-m);
+  }
+}

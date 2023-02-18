@@ -1,17 +1,22 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
+import { observer } from "mobx-react-lite";
 import "./PresenceIndicator.styles.scss";
 
 interface StatusIndicatorProps {
   isOnline: boolean;
+  withText?: boolean;
+  className?: string;
 }
 
-const PresenceIndicator: React.FC<StatusIndicatorProps> = ({ isOnline }) => {
-  const presenceIndicator = cn("PresenceIndicator");
-  return (
-    <div className={presenceIndicator({ online: isOnline })}>
-      {isOnline ? "Online" : "Offline"}
-    </div>
-  );
-};
-export default PresenceIndicator;
+export const PresenceIndicator: React.FC<StatusIndicatorProps> = observer(
+  ({ isOnline, className, withText = false }: StatusIndicatorProps) => {
+    const presenceIndicator = cn("PresenceIndicator");
+    const textIndicator = isOnline ? "Online" : "Offline";
+    return (
+      <div className={presenceIndicator({ online: isOnline }, [className])}>
+        {withText && textIndicator}
+      </div>
+    );
+  }
+);

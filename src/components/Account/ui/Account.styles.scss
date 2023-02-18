@@ -1,0 +1,53 @@
+@import "../../../styles//functions";
+
+.Account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: toRem(11);
+
+  &_open {
+    margin-bottom: toRem(36);
+  }
+
+  &-Avatar_open {
+    margin-bottom: toRem(12);
+  }
+
+  &-Info {
+    display: none;
+    opacity: 0;
+    transition: all 3s;
+  }
+
+  &-Info_open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+
+  &-Username {
+    margin-bottom: toRem(5);
+    text-align: center;
+    line-height: var(--font-line-l);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-l);
+  }
+
+  &-PresenceStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &-PresenceIndicator {
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

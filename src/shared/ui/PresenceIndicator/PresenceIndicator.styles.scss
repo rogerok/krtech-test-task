@@ -1,23 +1,8 @@
+@import "../../../styles/functions";
+
 .PresenceIndicator {
-  position: relative;
-  font-size: var(--font-size-s);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -1rem;
-    width: 0.5rem;
-    height: 0.5rem;
-    display: block;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background-color: var(--red);
-  }
-
-  &_online {
-    &::before {
-      background-color: var(--green-200);
-    }
-  }
+  width: toRem(10);
+  height: toRem(10);
+  border-radius: 50%;
+  background-color: var(--green-200);
 }

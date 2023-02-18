@@ -1,0 +1,20 @@
+@import "../../../styles/functions";
+
+.ContactsList {
+  background-color: var(--white);
+
+  &-Contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-Contacts_empty {
+    padding: 2rem;
+    align-items: center;
+  }
+
+  &-Form {
+    padding: toRem(20) toRem(14);
+    border-bottom: 1px solid var(--grey-200);
+  }
+}

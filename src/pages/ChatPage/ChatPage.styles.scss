@@ -1,0 +1,67 @@
+@import "./../../styles/functions";
+@import "./../../styles/mixins";
+.ChatPage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--grey-100);
+  color: var(--blue-700);
+
+  &-Header {
+    min-height: 70px;
+    width: 100%;
+    padding: toRem(10) toRem(10) toRem(13) toRem(10);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    background-color: var(--white);
+    @include base-shadow-1;
+  }
+
+  &-UserName {
+    margin-bottom: toRem(7);
+    text-align: center;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &-Chat {
+    height: 100%;
+    width: 100%;
+    padding: toRem(8) toRem(30);
+    overflow-y: scroll;
+  }
+
+  &-Form {
+    width: 100%;
+    margin-top: auto;
+    padding: toRem(12) toRem(17);
+    background-color: var(--white);
+    @include base-shadow-2;
+  }
+}
+
+#chat::-webkit-scrollbar-thumb {
+  background: rgba(17, 68, 117, 0.5);
+  border-radius: 3px;
+  height: 7px;
+  width: 3px;
+}
+
+#chat::-webkit-scrollbar-thumb:hover {
+  background: rgba(17, 68, 117, 0.8);
+}
+
+#chat::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--grey-100);
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 1300px) {
+  .ChatPage {
+    &-UserName {
+      font-size: var(--font-size-m);
+    }
+  }
+}

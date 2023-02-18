@@ -6,6 +6,7 @@
   align-items: center;
   box-shadow: 0px 3px 7px rgba(17, 68, 117, 0.35);
   font-weight: var(--font-weight-regular);
+  color: var(--white);
 
   &_size_sm {
     width: 14px;
@@ -15,8 +16,17 @@
   }
 
   &_size_lg {
-    padding: toRem(5);
+    width: 33px;
+    height: 22px;
+    padding: 0 toRem(5);
     border-radius: 11px;
+    font-size: var(--font-size-xs);
+  }
+
+  &_size_xl {
+    width: 94px;
+    height: 30px;
+    border-radius: 17px;
     font-size: var(--font-size-xs);
   }
 
@@ -25,5 +35,30 @@
   }
   &_color_red {
     background-color: var(--red);
+  }
+  &_color_grey {
+    background-color: var(--grey-300);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .Badge {
+    &_size_lg {
+      width: 42px;
+      height: 32px;
+      border-radius: 18px;
+      font-size: var(--font-size-s);
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .Badge {
+    &_size_xl {
+      width: 100px;
+      height: 40px;
+      border-radius: 17px;
+      font-size: var(--font-size-s);
+    }
   }
 }

@@ -1,0 +1,13 @@
+@import "../../../styles/functions";
+
+.Input {
+  width: 100%;
+  padding: toRem(5) toRem(16);
+  background-color: var(--grey-100);
+  border-radius: 15px;
+  border: none;
+
+  &:focus {
+    outline: 2px solid var(--blue-600);
+  }
+}

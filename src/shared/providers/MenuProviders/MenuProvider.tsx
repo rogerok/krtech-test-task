@@ -5,7 +5,7 @@ interface MenuProviderProps {
   children: React.ReactNode;
 }
 
-const MenuProvider: React.FC<MenuProviderProps> = ({ children }) => {
+export const MenuProvider: React.FC<MenuProviderProps> = ({ children }) => {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => setOpen(!open);
   const defaultProps = useMemo(() => ({ open, toggleOpen }), [open]);
@@ -14,5 +14,3 @@ const MenuProvider: React.FC<MenuProviderProps> = ({ children }) => {
     <MenuContext.Provider value={defaultProps}>{children}</MenuContext.Provider>
   );
 };
-
-export default MenuProvider;
