@@ -40,3 +40,25 @@
     background-color: var(--grey-300);
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .Badge {
+    &_size_lg {
+      width: 42px;
+      height: 32px;
+      border-radius: 18px;
+      font-size: var(--font-size-s);
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .Badge {
+    &_size_xl {
+      width: 100px;
+      height: 40px;
+      border-radius: 17px;
+      font-size: var(--font-size-s);
+    }
+  }
+}

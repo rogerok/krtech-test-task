@@ -57,3 +57,11 @@
   -webkit-box-shadow: inset 0 0 6px var(--grey-100);
   background-color: transparent;
 }
+
+@media only screen and (min-width: 1300px) {
+  .ChatPage {
+    &-UserName {
+      font-size: var(--font-size-m);
+    }
+  }
+}

@@ -35,16 +35,6 @@
     margin-right: toRem(10);
   }
 
-  &_first {
-    border-radius: 16px 16px 16px 4px;
-  }
-  &_middle {
-    border-radius: 16px;
-  }
-  &_last {
-    border-radius: 4px 16px 16px 16px;
-  }
-
   &-Time {
     margin-top: auto;
     margin-left: auto;
@@ -57,5 +47,11 @@
     &_inverted {
       color: var(--white);
     }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .Message {
+    font-size: var(--font-size-m);
   }
 }

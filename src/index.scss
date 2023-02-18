@@ -1,10 +1,10 @@
 @import "./styles/reset";
 @import "./styles/fonts";
-@import "./styles/variables/colors";
-@import "./styles/variables/fonts";
 @import "./styles/functions";
 @import "./styles/mixins";
 @import "./styles/visually-hidden";
+@import "./styles/variables/colors";
+@import "./styles/variables/fonts";
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -36,7 +36,6 @@
 
 body {
   margin: 0 auto;
-  width: 1200px;
   max-width: 100%;
   min-height: 100vh;
   background-color: var(--grey-100);

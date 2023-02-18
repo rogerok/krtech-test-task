@@ -95,3 +95,12 @@
     top: 14px;
   }
 }
+
+@media only screen and (min-width: 1300px) {
+  .Contact {
+    font-size: var(--font-size-m);
+    &-Text {
+      font-size: var(--font-size-l);
+    }
+  }
+}

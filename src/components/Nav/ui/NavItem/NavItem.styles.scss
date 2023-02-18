@@ -32,6 +32,11 @@
     @include base-transition;
   }
 
+  &-Icon {
+    width: 24px;
+    height: 19px;
+  }
+
   &-Text_open {
     margin-left: toRem(20);
     display: inline-block;
@@ -48,5 +53,20 @@
     top: 50%;
     right: toRem(20);
     transform: translateY(-50%);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .Nav {
+    &-Item {
+      font-size: var(--font-size-m);
+    }
+    &-Item_open {
+      padding: toRem(35) toRem(28);
+    }
+    &-Icon {
+      width: 42px;
+      height: 32px;
+    }
   }
 }

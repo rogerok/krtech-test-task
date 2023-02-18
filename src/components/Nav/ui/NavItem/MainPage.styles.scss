@@ -27,15 +27,7 @@
 @media only screen and (max-width: 1000px) {
   .MainPage {
     &-ContactsList {
-      width: 40%;
-    }
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .MainPage {
-    &-ContactsList {
-      width: 42%;
+      width: 35%;
     }
   }
 }

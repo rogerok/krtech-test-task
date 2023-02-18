@@ -22,10 +22,10 @@ export const NavItem = React.memo(
 
     return (
       <NavLink
-        className={({ isActive }) => nav("Item", { active: isActive })}
+        className={({ isActive }) => nav("Item", { active: isActive, open })}
         to={path}
       >
-        <Icon />
+        <Icon className={nav("Icon")} />
         <span
           className={nav(
             "Text",
@@ -37,6 +37,7 @@ export const NavItem = React.memo(
         >
           {children}
         </span>
+
         {Badge && !!unreadedMessages && (
           <Badge
             className={nav("Badge", { open })}
