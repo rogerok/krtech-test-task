@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { cn } from "@bem-react/classname";
-import { useLocation } from "react-router-dom";
 import { observer } from "mobx-react-lite";
+import { useLocation } from "react-router-dom";
 import { contactsStore } from "shared/store/contacts.store";
 import { userStore } from "shared/store/user.store";
-
 import { TypingIndicator } from "shared/ui/TypingIndicator/TypingIndicator";
-import Message from "shared/ui/Message/Message";
+import { Message } from "shared/ui/Message/Message";
 import { Input } from "shared/ui/Input/Input";
 import "./ChatPage.styles.scss";
 
@@ -44,7 +43,6 @@ export const ChatPage = observer(() => {
               className={chatPage("Message")}
               time={date}
               text={text}
-              userId={userId}
               isMe={accountId === userId}
               newDay={newDay}
             />

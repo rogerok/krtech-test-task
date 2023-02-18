@@ -2,7 +2,7 @@ import React, { useEffect, useState, useTransition } from "react";
 import { cn } from "@bem-react/classname";
 import { observer } from "mobx-react-lite";
 import { ContactsList } from "components/ContactsList";
-import { Menu } from "widgets/Menu/Menu";
+import { Menu } from "components/Menu";
 import { MenuProvider } from "shared/providers/MenuProviders/MenuProvider";
 import { Input } from "shared/ui/Input/Input";
 import { Outlet } from "react-router-dom";
@@ -34,7 +34,7 @@ export const MainPage = observer(() => {
     ? contactsStore.searchResults
     : sortedContacts;
 
-  /*   useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       const randomUsersQuantity = generateRandomNumber(1, 2);
       const arrayOfNumbers = generateArrayOfNumbers(randomUsersQuantity);
@@ -63,7 +63,7 @@ export const MainPage = observer(() => {
       });
     }, 5000);
     return () => clearTimeout(interval);
-  }, []); */
+  }, []);
 
   return (
     <div className={mainPage()}>

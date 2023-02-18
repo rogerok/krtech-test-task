@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
 import { cn } from "@bem-react/classname";
+import { NavLink } from "react-router-dom";
 import { BadgeColor, BadgeProps, BadgeSize } from "shared/ui/Badge/Badge";
 import { MenuContext } from "shared/providers/MenuProviders/MenuContext";
 import { visuallyHidden } from "shared/lib/visuallyHidden";

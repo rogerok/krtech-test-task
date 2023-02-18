@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import { cn } from "@bem-react/classname";
+import { observer } from "mobx-react-lite";
 import { Link, useMatch } from "react-router-dom";
 import { Avatar } from "shared/ui/Avatar/Avatar";
 import { TypingIndicator } from "shared/ui/TypingIndicator/TypingIndicator";
 import { RoutePath } from "shared/config/routeConfig";
-import { observer } from "mobx-react-lite";
 import { PresenceIndicator } from "shared/ui/PresenceIndicator/PresenceIndicator";
 import { Badge, BadgeSize } from "shared/ui/Badge/Badge";
 import { reduceStringLength } from "shared/lib/reduceStringLength";

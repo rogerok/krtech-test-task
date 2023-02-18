@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
-import "./PresenceIndicator.styles.scss";
 import { observer } from "mobx-react-lite";
+import "./PresenceIndicator.styles.scss";
 
 interface StatusIndicatorProps {
   isOnline: boolean;

@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { RoutePath } from "shared/config/routeConfig";
 import { ChatPage } from "pages/ChatPage/ChatPage";
 import { MainPage } from "pages/MainPage/MainPage";
-import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
+import { NotFoundPage } from "pages/NotFoundPage/NotFoundPage";
 
 const AppRouter = () => (
   <Routes>

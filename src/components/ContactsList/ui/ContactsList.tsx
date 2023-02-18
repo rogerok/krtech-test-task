@@ -1,8 +1,8 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
+import { observer } from "mobx-react-lite";
 import { Contact } from "components/Contact";
 import { UserData } from "shared/data";
-import { observer } from "mobx-react-lite";
 import "./ContactList.styles.scss";
 
 interface ContactListProps {
@@ -12,14 +12,7 @@ interface ContactListProps {
 export const ContactsList: React.FC<ContactListProps> = observer(
   ({ usersData }) => {
     const contactList = cn("ContactsList");
-
     const isNotFounded = !usersData.length;
-
-    const sortedContactsList = usersData.sort(
-      (a, b) =>
-        new Date(a.lastMessageDate).getTime() -
-        new Date(b.lastMessageDate).getTime()
-    );
 
     return (
       <section className={contactList()}>

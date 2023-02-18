@@ -12,16 +12,15 @@ import "./Message.styles.scss";
 interface MessageProps {
   time: string;
   text: string;
-  userId: number;
   className?: string;
   isMe: boolean;
   newDay: boolean;
 }
 
-const Message: React.FC<MessageProps> = ({
+export const Message: React.FC<MessageProps> = ({
   time,
   text,
-  userId,
+
   className,
   newDay,
   isMe,
@@ -52,5 +51,3 @@ const Message: React.FC<MessageProps> = ({
     </>
   );
 };
-
-export default Message;
