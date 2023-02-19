@@ -23,6 +23,7 @@ export const MainPage = observer(() => {
     updateLastMessageDate,
     searchUser,
     sortedContacts,
+    searchResults,
   } = contactsStore;
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,9 +31,7 @@ export const MainPage = observer(() => {
     startTransition(() => searchUser(e.target.value));
   };
 
-  const contactsList = searchTerm
-    ? contactsStore.searchResults
-    : sortedContacts;
+  const contactsList = searchTerm ? searchResults : sortedContacts;
 
   useEffect(() => {
     const interval = setInterval(() => {
