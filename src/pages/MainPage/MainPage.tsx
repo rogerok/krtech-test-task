@@ -42,7 +42,7 @@ export const MainPage = observer(() => {
         const randomDelay1 = generateRandomNumber(1000, 3000);
         const randomDelay2 = generateRandomNumber(1000, 10000);
         const randomId = generateRandomNumber(1, contactsList.length);
-        const willSendMessage = Boolean(generateRandomNumber(1, 10) >= 1);
+        const willSendMessage = Boolean(generateRandomNumber(1, 10) >= 3);
 
         delay(randomDelay1).then(() => {
           setUserOnline(randomId, true);
