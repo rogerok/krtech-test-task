@@ -23,36 +23,34 @@ export const ContactsList: React.FC<ContactListProps> = observer(
           </p>
         ) : (
           <ul className={contactList("Contacts")}>
-            {usersData
-              .reverse()
-              .map(
-                ({
-                  id,
-                  firstName,
-                  lastName,
-                  message,
-                  thumbnail,
-                  lastMessageDate,
-                  unreadedMessagesAmount,
-                  isOnline,
-                  isTyping,
-                  dialog,
-                }) => (
-                  <Contact
-                    key={id}
-                    id={id}
-                    firstName={firstName}
-                    lastName={lastName}
-                    message={message}
-                    thumbnail={thumbnail}
-                    lastMessageDate={lastMessageDate}
-                    unreadedMessagesAmount={unreadedMessagesAmount}
-                    isOnline={isOnline}
-                    isTyping={isTyping}
-                    dialog={dialog}
-                  />
-                )
-              )}
+            {usersData.map(
+              ({
+                id,
+                firstName,
+                lastName,
+                message,
+                thumbnail,
+                lastMessageDate,
+                unreadedMessagesAmount,
+                isOnline,
+                isTyping,
+                dialog,
+              }) => (
+                <Contact
+                  key={id}
+                  id={id}
+                  firstName={firstName}
+                  lastName={lastName}
+                  message={message}
+                  thumbnail={thumbnail}
+                  lastMessageDate={lastMessageDate}
+                  unreadedMessagesAmount={unreadedMessagesAmount}
+                  isOnline={isOnline}
+                  isTyping={isTyping}
+                  dialog={dialog}
+                />
+              )
+            )}
           </ul>
         )}
       </section>
