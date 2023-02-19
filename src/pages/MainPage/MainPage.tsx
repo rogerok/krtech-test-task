@@ -35,7 +35,7 @@ export const MainPage = observer(() => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const randomUsersQuantity = generateRandomNumber(1, 2);
+      const randomUsersQuantity = generateRandomNumber(1, 3);
       const arrayOfNumbers = generateArrayOfNumbers(randomUsersQuantity);
 
       arrayOfNumbers.forEach((_) => {
