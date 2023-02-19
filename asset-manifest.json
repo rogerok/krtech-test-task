@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/krtech-test-task/static/css/main.cceb1a23.css",
-    "main.js": "/krtech-test-task/static/js/main.f49cf246.js",
+    "main.js": "/krtech-test-task/static/js/main.db83f238.js",
     "static/media/dialog.svg": "/krtech-test-task/static/media/dialog.40e3269cc6500e6ae70d22de12d87ef9.svg",
     "static/media/avatar.jpg": "/krtech-test-task/static/media/avatar.ca26634c7fcbf1949c35.jpg",
     "static/media/roboto-v30-latin_cyrillic-700.woff": "/krtech-test-task/static/media/roboto-v30-latin_cyrillic-700.7bd45dae328c719f7559.woff",
@@ -18,10 +18,10 @@
     "static/media/close-button.svg": "/krtech-test-task/static/media/close-button.7378faffca613477ee05d42c502e7c00.svg",
     "static/media/open-button.svg": "/krtech-test-task/static/media/open-button.9df778123909a6ad1401a236da8aa6aa.svg",
     "main.cceb1a23.css.map": "/krtech-test-task/static/css/main.cceb1a23.css.map",
-    "main.f49cf246.js.map": "/krtech-test-task/static/js/main.f49cf246.js.map"
+    "main.db83f238.js.map": "/krtech-test-task/static/js/main.db83f238.js.map"
   },
   "entrypoints": [
     "static/css/main.cceb1a23.css",
-    "static/js/main.f49cf246.js"
+    "static/js/main.db83f238.js"
   ]
 }
